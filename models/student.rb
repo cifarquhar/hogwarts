@@ -15,6 +15,12 @@ class Student
     @id = returned[0]['id'].to_i
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM students WHERE id = #{id};"
+    returned = SqlRunner.run(sql)
+    return Student.new(returned[0])
+  end
+
   def self.all()
     sql = "SELECT * FROM students;"
     returned = SqlRunner.run(sql)

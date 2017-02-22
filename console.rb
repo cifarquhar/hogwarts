@@ -9,3 +9,6 @@ student3 = Student.new({'first_name' => "Draco", 'last_name' => "Malfoy", 'age' 
 student1.save()
 student2.save()
 student3.save()
+
+binding.pry
+nil
