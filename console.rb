@@ -3,12 +3,12 @@ require_relative('models/house.rb')
 require('pry')
 
 Student.delete_all()
+House.delete_all()
 
-
-house1 = House.new({'name' => "Gryffindor", 'logo_url' => ""})
-house2 = House.new({'name' => "Hufflepuff", 'logo_url' => ""})
-house3 = House.new({'name' => "Ravenclaw", 'logo_url' => ""})
-house4 = House.new({'name' => "Slytherin", 'logo_url' => ""})
+house1 = House.new({'name' => "Gryffindor", 'logo_url' => "http://vignette1.wikia.nocookie.net/harrypotter/images/8/8e/0.31_Gryffindor_Crest_Transparent.png"})
+house2 = House.new({'name' => "Hufflepuff", 'logo_url' => "http://vignette2.wikia.nocookie.net/harrypotter/images/5/50/0.51_Hufflepuff_Crest_Transparent.png"})
+house3 = House.new({'name' => "Ravenclaw", 'logo_url' => "http://vignette2.wikia.nocookie.net/harrypotter/images/2/29/0.41_Ravenclaw_Crest_Transparent.png"})
+house4 = House.new({'name' => "Slytherin", 'logo_url' => "http://vignette4.wikia.nocookie.net/harrypotter/images/d/d3/0.61_Slytherin_Crest_Transparent.png"})
 house1.save
 house2.save
 house3.save
