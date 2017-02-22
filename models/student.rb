@@ -3,17 +3,17 @@ require_relative('../db/sql_runner.rb')
 class Student
 
   attr_reader :id
-  attr_accessor :first_name, :last_name, :age
+  attr_accessor :first_name, :last_name, :age, :house_id
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @first_name = options['first_name']
     @last_name = options['last_name']
     @age = options['age'].to_i
-    @house = options['house']
+    @house_id = options['house_id'].to_i
   end
 
   def save()
-    sql = "INSERT INTO students (first_name,last_name,age,house) VALUES ('#{@first_name}','#{@last_name}',#{@age},'#{@house}') RETURNING id;"
+    sql = "INSERT INTO students (first_name,last_name,age,house_id) VALUES ('#{@first_name}','#{@last_name}',#{@age},#{@house_id}) RETURNING id;"
     returned = SqlRunner.run(sql)
     @id = returned[0]['id'].to_i
   end
