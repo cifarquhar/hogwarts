@@ -9,10 +9,11 @@ class Student
     @first_name = options['first_name']
     @last_name = options['last_name']
     @age = options['age'].to_i
+    @house = options['house']
   end
 
   def save()
-    sql = "INSERT INTO students (first_name,last_name,age) VALUES ('#{@first_name}','#{@last_name}',#{@age}) RETURNING id;"
+    sql = "INSERT INTO students (first_name,last_name,age,house) VALUES ('#{@first_name}','#{@last_name}',#{@age},'#{@house}') RETURNING id;"
     returned = SqlRunner.run(sql)
     @id = returned[0]['id'].to_i
   end

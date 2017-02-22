@@ -14,12 +14,14 @@ house2.save
 house3.save
 house4.save
 
-student1 = Student.new({'first_name' => "Harry", 'last_name' => "Potter", 'age' => 11})
-student2 = Student.new({'first_name' => "Ron", 'last_name' => "Weasley", 'age' => 11})
-student3 = Student.new({'first_name' => "Draco", 'last_name' => "Malfoy", 'age' => 11})
+student1 = Student.new({'first_name' => "Harry", 'last_name' => "Potter", 'age' => 11, 'house' => "Gryffindor"})
+student2 = Student.new({'first_name' => "Ron", 'last_name' => "Weasley", 'age' => 11, 'house' => "Gryffindor"})
+student3 = Student.new({'first_name' => "Draco", 'last_name' => "Malfoy", 'age' => 11, 'house' => "Slytherin"})
+student4 = Student.new({'first_name' => "Hermione", 'last_name' => "Granger", 'age' => 12, 'house' => "Gryffindor"})
 student1.save()
 student2.save()
 student3.save()
+student4.save()
 
 binding.pry
 nil
